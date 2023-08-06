@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>First</title>
+    <title>Pit Command</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,7 +14,7 @@
           <span class="cust-br"> </span>SHOP TOOLS NOW →</a
         >
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <div id="hamburger-icon">
           <div class="bar1"></div>
           <div class="bar2"></div>
@@ -110,7 +110,7 @@
           </ul>
         </div>
 
-        <img src="./images/shopping-cart (1).png" alt="" class="cart-logo" />
+        <img src="./images/shopping-cart.png" alt="" class="cart-logo" />
       </nav>
     </header>
     <main>
@@ -160,12 +160,36 @@
         <section class="section2">
           <h2>AS SEEN IN</h2>
           <div class="logos">
-            <img src="./images/1.webp" alt="first image" class="logo" />
-            <img src="./images/2.webp" alt="second image" class="logo" />
-            <img src="./images/3.png" alt="third image" class="logo" />
-            <img src="./images/4.webp" alt="fourth image" class="logo" />
-            <img src="./images/5.webp" alt="fifth image" class="logo" />
-            <img src="./images/6.webp" alt="sixth image" class="logo" />
+            <img
+              src="./images/1.webp"
+              alt="first image"
+              class="logo section2-logo1"
+            />
+            <img
+              src="./images/2.webp"
+              alt="second image"
+              class="logo section2-logo2"
+            />
+            <img
+              src="./images/3.png"
+              alt="third image"
+              class="logo section2-logo3"
+            />
+            <img
+              src="./images/4.webp"
+              alt="fourth image"
+              class="logo section2-logo4"
+            />
+            <img
+              src="./images/5.webp"
+              alt="fifth image"
+              class="logo section2-logo5"
+            />
+            <img
+              src="./images/6.webp"
+              alt="sixth image"
+              class="logo section2-logo6"
+            />
           </div>
         </section>
         <section class="section3">
@@ -567,9 +591,7 @@
       <div class="section-footer">
         <!-- First Column -->
         <div class="cust-fot-width">
-          <h6 class="section-footer__title news-title no-wrap">
-            JOIN THE PIT.
-          </h6>
+          <h6 class="section-footer__title_pit">JOIN THE PIT.</h6>
           <div class="section-footer__text">
             <p>
               Sign up for exclusive offers, original stories, activism
@@ -578,15 +600,7 @@
           </div>
 
           <div class="signup-form">
-            <form
-              method="post"
-              action="/contact#footer_newsletter_signup"
-              id="footer_newsletter_signup"
-              accept-charset="UTF-8"
-              class="contact-form"
-            >
-              <input type="hidden" name="form_type" value="customer" />
-              <input type="hidden" name="utf8" value="✓" />
+            <form>
               <p>Email - can't be blank</p>
 
               <div class="form-full">
@@ -607,10 +621,7 @@
           </div>
         </div>
         <!-- Second Column -->
-        <div
-          id="custom-footer-menu-link"
-          class="section-footer__row__col section-footer__menu-block"
-        >
+        <div>
           <h6 class="section-footer__title no-wrap">TOOLS</h6>
           <ul class="footer_sec_b_first_menu">
             <li>
@@ -622,38 +633,20 @@
               >
             </li>
             <li>
-              <a
-                data-cc-animate-click=""
-                href="/products/talons"
-                class="no-wrap"
-                >Talons</a
-              >
+              <a data-cc-animate-click="" href="#" class="no-wrap">Talons</a>
             </li>
             <li>
-              <a
-                data-cc-animate-click=""
-                href="/products/pit-commander"
-                class="no-wrap"
-                >Commander</a
-              >
+              <a data-cc-animate-click="" href="#" class="no-wrap">Commander</a>
             </li>
           </ul>
           <div class="sec-menu">
             <h6 class="section-footer__title no-wrap">Support</h6>
             <ul class="footer_sec_b_sec_menu">
               <li>
-                <a
-                  data-cc-animate-click=""
-                  href="https://pitcommand.com/policies/refund-policy"
-                  class="no-wrap"
-                  >Returns</a
-                >
+                <a data-cc-animate-click="" href="#" class="no-wrap">Returns</a>
               </li>
               <li>
-                <a
-                  data-cc-animate-click=""
-                  href="mailto:info@pitcommand.com"
-                  class="no-wrap"
+                <a data-cc-animate-click="" href="#" class="no-wrap"
                   >Contact Us</a
                 >
               </li>
@@ -668,43 +661,30 @@
           <h6 class="section-footer__title no-wrap">Company</h6>
           <ul class="footer_third_b_first_menu">
             <li>
-              <a data-cc-animate-click="" href="/pages/about" class="no-wrap"
+              <a data-cc-animate-click="" href="#" class="no-wrap"
                 >Who We Are</a
               >
             </li>
             <li>
-              <a data-cc-animate-click="" href="/pages/faqs" class="no-wrap"
-                >FAQ</a
-              >
+              <a data-cc-animate-click="" href="#" class="no-wrap">FAQ</a>
             </li>
           </ul>
         </div>
 
         <!-- Fourth Column -->
-        <div
-          id="custom-footer-menu-link"
-          class="section-footer__row__col section-footer__menu-block"
-        >
+        <div>
           <h6 class="section-footer__title no-wrap">TERMS &amp; POLICIES</h6>
           <ul class="footer_fourth_b_first_menu">
             <li>
-              <a
-                data-cc-animate-click=""
-                href="/policies/privacy-policy"
-                class="no-wrap"
-                >Privacy</a
-              >
+              <a data-cc-animate-click="" href="#" class="no-wrap">Privacy</a>
             </li>
             <li>
-              <a
-                data-cc-animate-click=""
-                href="/policies/terms-of-service"
-                class="no-wrap"
+              <a data-cc-animate-click="" href="#" class="no-wrap"
                 >Terms of Service</a
               >
             </li>
             <li>
-              <a data-cc-animate-click="" href="/pages/ccpa-opt-out"
+              <a data-cc-animate-click="" href="#"
                 >Do not sell my personal information</a
               >
             </li>
@@ -724,11 +704,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      class="instagram"
-                      target="_blank"
-                      href="https://www.instagram.com/pitcommand/"
-                    >
+                    <a class="instagram" target="_blank" href="#">
                       <img
                         class="social-icon"
                         src="./images/instagram.png"
@@ -757,14 +733,10 @@
           >© 2023 <a data-cc-animate-click="" href="/">Pit Command</a>.</span
         >
 
-        <a
-          target="_blank"
-          rel="nofollow"
-          href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore"
-        >
-        </a>
+        <a target="_blank" rel="nofollow" href="#"> </a>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

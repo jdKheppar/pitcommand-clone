@@ -3,8 +3,8 @@
 *::after {
   box-sizing: border-box;
 }
-/* for testing purpose * {
-  outline: 1px solid yellow;
+/* * {
+  outline: 1px solid red;
 } */
 body {
   margin: 0;
@@ -23,14 +23,14 @@ body {
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-image: linear-gradient(to right, #180e0a, #fc4c02),
-    linear-gradient(to right, #fc4c02, #fc4c02),
-    linear-gradient(to right, #fc4c02, #fc4c0280),
-    linear-gradient(to right, #fc4c0280, #fdb600),
-    linear-gradient(to right, #fdb600, #180e0a),
-    linear-gradient(to right, #180e0a, #180e0a);
-  background-size: 20% 100%;
-  background-position: 0 0, 20% 0, 40% 0, 60% 0, 80% 0, 100% 0;
+  background-image: linear-gradient(
+    to right,
+    #180e0a,
+    #fc4c02,
+    #fc4c0280,
+    #a2762e,
+    #180e0a
+  );
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -39,6 +39,14 @@ body {
 .offer a,
 span {
   color: white;
+}
+
+/* Navbar */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 4;
 }
 
 .nav {
@@ -67,6 +75,8 @@ span {
   justify-content: space-around;
 }
 
+/* Dropdown Nav */
+
 .dropbtn {
   background-color: black;
   color: white;
@@ -88,7 +98,7 @@ span {
   color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 3;
 }
 
 .dropdown-content a {
@@ -114,6 +124,58 @@ span {
   text-decoration: underline #fc4c02 4px;
 }
 
+/* Hamburger CSS */
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 3;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
 /* .section1  */
 .section1 {
   display: flex;
@@ -126,29 +188,24 @@ span {
   overflow: hidden;
 }
 
-/* .section1 h3 {
+.section1 h3 {
+  color: white;
   position: absolute;
   top: 30%;
-  left: 50%;
-  text-align: center;
-  font-size: 24px;
-  z-index: 1; 
+  z-index: 1;
 }
-h2 {
+.section1 h2 {
+  color: white;
+  top: 40%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  font-size: 24px;
-  z-index: 1; 
+  font-size: xx-large;
+  z-index: 1;
 }
+
 .btn-section1 {
   position: absolute;
-  top: 70%;
-  left: 50%;
-  text-align: center;
-  font-size: 24px;
-  z-index: 1; 
+  top: 60%;
+  z-index: 1;
 }
 .video-background video {
   position: absolute;
@@ -158,7 +215,7 @@ h2 {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-} */
+}
 
 .btn-section1 {
   background-color: #fc4c02;
@@ -166,19 +223,21 @@ h2 {
   border: none;
   height: 3rem;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 #chat-svg {
   height: 30px;
   width: 30px;
 }
 #chat-messenger-button {
-  position: sticky;
+  position: fixed;
   bottom: 10px;
   right: 10px;
   align-self: flex-end;
   border-radius: 100%;
   padding: 10px;
   cursor: pointer;
+  z-index: 2;
 }
 
 /* Section2 */
@@ -189,20 +248,43 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .logos {
   background-color: #fc4c02;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "one two three"
+    ". . ."
+    "seven eight nine";
+
   padding: 30px 100px;
-  /* grid-area: logo logo logog
-                  logo
-            logo  logo  logo  ; */
 }
 .logo {
+  margin-left: 3rem;
+  margin-right: 3rem;
   height: 3.7rem;
   width: 12rem;
+}
+.section2-logo1 {
+  grid-area: one;
+}
+.section2-logo2 {
+  grid-area: two;
+}
+.section2-logo3 {
+  grid-area: three;
+}
+.section2-logo4 {
+  grid-area: seven;
+}
+.section2-logo5 {
+  grid-area: eight;
+}
+.section2-logo6 {
+  grid-area: nine;
 }
 
 /* Section3 */
@@ -255,10 +337,11 @@ svg {
 /* section4 */
 
 .section4 {
+  width: 100%;
   padding: 60px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: 30% 30% 30%;
+  gap: 30px;
   background-color: #2f2f2e;
   color: white;
 }
@@ -319,6 +402,19 @@ svg {
   justify-content: center;
   background-color: #2b2b2b;
   color: white;
+  overflow: hidden;
+}
+
+.section-footer__title_pit {
+  font-size: xx-large;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #e99c08;
+}
+
+.section-footer__title {
+  font-size: large;
+  margin-top: 40px;
 }
 
 .form-full {
@@ -343,6 +439,9 @@ svg {
 
 .footer_sec_b_first_menu {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .footer_sec_b_first_menu li a {
   text-decoration: none;
@@ -393,56 +492,6 @@ svg {
   color: white;
 }
 
-/* Hamburger CSS */
-#hamburger-icon {
-  margin: auto 0;
-  display: none;
-  cursor: pointer;
-}
-
-#hamburger-icon div {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.open .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-  transform: rotate(-45deg) translate(-6px, 6px);
-}
-
-.open .bar2 {
-  opacity: 0;
-}
-
-.open .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -8px);
-  transform: rotate(45deg) translate(-6px, -8px);
-}
-
-.open .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: black;
-}
-
-.mobile-menu li {
-  margin-bottom: 10px;
-}
-
 /* Media query for hamburger */
 @media screen and (max-width: 1100px) {
   .main-nav {
@@ -452,15 +501,52 @@ svg {
   #hamburger-icon {
     display: block;
   }
+  .logos {
+    padding: 20px 80px;
+  }
+  .logo {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 3rem;
+    width: 10rem;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .section5 {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
     color: white;
     background-color: black;
     gap: 0px;
     padding: 10px;
+  }
+  .section-footer {
+    padding: 50px;
+    grid-template-columns: 50% 50%;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .section-footer {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .logo {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    height: 2.8rem;
+    width: 6rem;
+  }
+  .logos {
+    padding: 5px 10px;
+    grid-template-areas:
+      "seven eight nine"
+      ". two ."
+      "one . three";
+    gap: 2rem;
   }
 }
 
