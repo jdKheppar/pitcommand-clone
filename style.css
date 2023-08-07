@@ -18,7 +18,14 @@ body {
 .upper {
   text-transform: uppercase;
 }
-
+/*    to right,
+    #180e0a,
+    #fc4c02,
+    #fc4c02,
+    #fc4c02,
+    #fc4c0280,
+    #FDB600,
+    #180e0a */
 .offer {
   height: 5vh;
   width: 100%;
@@ -28,9 +35,10 @@ body {
     to right,
     #180e0a,
     #fc4c02,
+    #fc4c02,
+    #fc4c02,
     #fc4c0280,
-    #fc4c0280,
-    #a2762e,
+    #FDB600,
     #180e0a
   );
   background-repeat: no-repeat;
@@ -122,6 +130,7 @@ body {
 }
 .dropbtn:hover {
   text-decoration: underline #fc4c02 4px;
+  text-underline-offset: 10px;
 }
 
 /* Hamburger CSS */
@@ -193,15 +202,16 @@ body {
   position: absolute;
   top: 30%;
   z-index: 1;
+  font-size: 16px;
 }
 .section1 h2 {
   color: white;
-  top: 40%;
+  top: 35%;
   position: absolute;
-  font-size: xx-large;
+  font-size: 50px;
   font-weight: bold;
   z-index: 1;
-  letter-spacing: 2px;
+ 
 }
 
 .btn-section1 {
@@ -297,6 +307,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   padding: 50px;
   background-color: black;
+  gap: 1rem;
 }
 svg {
   width: 70px;
@@ -312,6 +323,7 @@ svg {
   position: relative;
   padding-bottom: 4rem;
 }
+
 
 .btn-section3 {
   background-color: #fc4c02;
@@ -356,6 +368,9 @@ svg {
 }
 .section4-card p {
   width: 50%;
+}
+.section4-desc{
+  text-align: center;
 }
 
 /* Section5 */
@@ -487,13 +502,15 @@ svg {
 }
 
 .social-icon {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 .social-links__list {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+}
+.social-link{
+  margin: 5px;
 }
 
 .copyright {
@@ -558,15 +575,15 @@ svg {
     margin-left: 0rem;
     margin-right: 0rem;
     height: 2.8rem;
-    width: 6rem;
+    width: 7rem;
   }
   .logos {
-    padding: 5px 10px;
+    padding: 5px 5px;
     grid-template-areas:
       "seven eight nine"
       ". two ."
       "one . three";
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
@@ -589,5 +606,9 @@ svg {
   .social-icon {
     height: 20px;
     width: 20px;
+  }
+  .desc{
+    width: 60%;
+    text-align: center;
   }
 }
