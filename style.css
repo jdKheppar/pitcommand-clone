@@ -20,6 +20,7 @@ body {
 }
 
 .offer {
+  height: 5vh;
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -28,6 +29,7 @@ body {
     #180e0a,
     #fc4c02,
     #fc4c0280,
+    #fc4c0280,
     #a2762e,
     #180e0a
   );
@@ -35,9 +37,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.offer a,
-span {
   color: white;
 }
 
@@ -51,6 +50,7 @@ span {
 
 .nav {
   width: 100%;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,7 +164,7 @@ span {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 18vh;
   left: 0;
   height: 100vh;
   width: 100%;
@@ -188,7 +188,7 @@ span {
   overflow: hidden;
 }
 
-.section1 h3 {
+.section1 p {
   color: white;
   position: absolute;
   top: 30%;
@@ -199,7 +199,9 @@ span {
   top: 40%;
   position: absolute;
   font-size: xx-large;
+  font-weight: bold;
   z-index: 1;
+  letter-spacing: 2px;
 }
 
 .btn-section1 {
@@ -262,6 +264,7 @@ span {
 
   padding: 30px 100px;
 }
+
 .logo {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -338,12 +341,21 @@ svg {
 
 .section4 {
   width: 100%;
-  padding: 60px;
+  padding: 40px;
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  gap: 30px;
+  gap: 20px;
   background-color: #2f2f2e;
   color: white;
+}
+.section4-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section4-card p {
+  width: 50%;
 }
 
 /* Section5 */
@@ -474,8 +486,8 @@ svg {
 }
 
 .social-icon {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 .social-links__list {
   display: flex;
@@ -534,6 +546,13 @@ svg {
 }
 
 @media screen and (max-width: 640px) {
+  .section1 h2 {
+    font-size: large;
+    font-weight: bold;
+    z-index: 1;
+    letter-spacing: 1px;
+  }
+
   .logo {
     margin-left: 0rem;
     margin-right: 0rem;
@@ -551,6 +570,12 @@ svg {
 }
 
 @media screen and (max-width: 600px) {
+  .offer p {
+    width: 70%;
+  }
+  .main-logo {
+    height: 16px;
+  }
   .section3 {
     grid-template-columns: auto;
     padding: 0px;
@@ -559,5 +584,9 @@ svg {
     padding: 10px;
     grid-template-columns: auto;
     gap: 10px;
+  }
+  .social-icon {
+    height: 20px;
+    width: 20px;
   }
 }
